@@ -29,4 +29,20 @@ impl Dipendente {
                 INIZIALI_DIP_S,
         );
     }
+
+   pub fn get_ID_DIPEN_lng(&self) -> Option<&i32>{
+      return self.ID_DIPEN_lng.as_ref();
+   }
+   pub fn get_DENOMINAZIONE_s(&self) -> Option<&String>{
+      return self.DENOMINAZIONE_s.as_ref();
+   }
+   pub fn get_COGNOME_S(&self) -> Option<&String>{
+      return self.COGNOME_S.as_ref();
+   }
+   pub fn get_NOME_S(&self) -> Option<&String>{
+      return self.NOME_S.as_ref();
+   }
+   pub fn get_INIZIALI_DIP_S(&self) -> Option<&String>{
+      return self.INIZIALI_DIP_S.as_ref();
+   }
 }

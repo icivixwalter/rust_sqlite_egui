@@ -20,8 +20,9 @@ fn main() {
    use self::schema::dipendente::dsl::*;
    let connessione = &mut establish_connection();
 
-   let resul: Vec<Dipendente> = dipendente
+   let lista_dipendenti: Vec<Dipendente> = dipendente
       .select(Dipendente::as_select())
+      // .limit(25)
       .load::<Dipendente>(connessione)
       .unwrap();
    // -------------------------------------------------------------//
@@ -30,14 +31,14 @@ fn main() {
    // -------------------------------------------------------------//
    //Note : attivo il print ed eseguo un ciclo form e stampo un result
    //      sul terminale
-   println!("stampo i dipendenti");
-   for mydipendente in resul {
-      println!("{}", mydipendente.ritorna_dipendente());
-   }
+   // println!("stampo i dipendenti");
+   // for mydipendente in lista_dipendenti {
+   //    println!("{}", mydipendente.ritorna_dipendente());
+   // }
    // -------------------------------------------------------------//
 
    //@AVVIO LA @FORM @INIZIALE E LE GUI
-   avvia_gui().unwrap();
+   avvia_gui(lista_dipendenti).unwrap();
 }
 
 
