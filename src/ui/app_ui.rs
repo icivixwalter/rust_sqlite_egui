@@ -1,3 +1,4 @@
+use eframe::Theme;
 use egui_extras::{Column, TableBuilder};
 use crate::models::Dipendente;
 
@@ -51,7 +52,7 @@ impl eframe::App for MyApp {
             ui.text_edit_singleline(&mut self.name)
                .labelled_by(name_label.id);
          });
-         //@modifica da 0...120 a 0...20
+         //è un widget chiamato slider - barra di aumento valori
          ui.add(egui::Slider::new(&mut self.age, 0..=20).text("age"));
          if ui.button("Click each year").clicked() {
             self.age += 1;
@@ -66,6 +67,7 @@ impl eframe::App for MyApp {
 
          //01 creo l'oggetto table con 5 colonne
          TableBuilder::new(ui)
+            .striped(true)
             .column(Column::remainder().at_least(40.0).resizable(true))
             .column(Column::remainder().at_least(80.0).resizable(true))
             .column(Column::remainder().at_least(50.0).resizable(true))
@@ -76,20 +78,20 @@ impl eframe::App for MyApp {
             .header(20.0, |mut header| {
                // definisci le colonne
                header.col(|app_ui| {
-                  app_ui.heading("ID_DIPEN_lng");
+                  app_ui.strong("ID_DIPEN_lng");
                });
                header.col(|app_ui| {
-                  app_ui.heading("DENOMINAZIONE_s");
+                  app_ui.strong("DENOMINAZIONE_s");
                });
 
                header.col(|app_ui| {
-                  app_ui.heading("COGNOME_S");
+                  app_ui.strong("COGNOME_S");
                });
                header.col(|app_ui| {
-                  app_ui.heading("NOME_S");
+                  app_ui.strong("NOME_S");
                });
                header.col(|app_ui| {
-                  app_ui.heading("INIZIALI_DIP_S");
+                  app_ui.strong("INIZIALI_DIP_S");
                });
             }).body(|body| {
             //03 itero nel record ed associo i 5 valori dei campi
@@ -121,17 +123,6 @@ impl eframe::App for MyApp {
 }
 //---------------------------------------------------------------------------//
 
-//old ---> egui::TopBottomPanel::top("Tabella").show(ctx, |app_ui| {
-//@modifica = al posto di egui::TopBottomPanel::top è stato impostato
-//l'impostazione right a destra per affiiancarlo ai valori
-//egui::SidePanel::right = imposta il panella della tabella a sx del progetto
-// egui::SidePanel::right("Tabella").show(ctx, |app_ui| {
-//
-// });
-//imposto la tabella
-//------------------------------------------------------------------------------------//
-
-
 //03 AVVIO LA  MYAPP
 //---------------------------------------------------------------------------//
 
@@ -139,7 +130,8 @@ pub fn avvia_gui(lista_dipendenti: Vec<Dipendente>) -> Result<(), eframe::Error>
    let options = eframe::NativeOptions {
       //grandezza iniziale form @modifica = da 320.0 a 240.0 in x320 y 390
       initial_window_size: Some(egui::vec2(800.0, 600.0)),
-      ..Default::default()
+      default_theme: Theme::Dark,
+      ..Default::default() // il resto
    };
    eframe::run_native(
       TITOLO_GUI,
