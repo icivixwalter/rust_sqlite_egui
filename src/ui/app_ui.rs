@@ -2,6 +2,24 @@ use eframe::Theme;
 use egui_extras::{Column, TableBuilder};
 use crate::models::Dipendente;
 
+//---------------------------------------------------------------------------//
+//---------------------------------------------------------------------------//
+/*01_COSTANTI+STRUTTURE
+
+   Note
+      creo le strutture
+       01_COSTANTI+STRUTTURE = creo la struttura MyApp + metodi
+
+            - 01.01_Struttura myApp = crea una struttura tabella
+                  
+
+            - 01.01_metodo lista_dipendenti = Metoto Vettore dipendenti
+            - 01.02_Default = imposto i valori della struttura con 
+                           valori base fissi
+                              
+
+*/
+
 
 //costanti
 pub const TITOLO_GUI: &str = "APPLICAZIONE DI PARTENZA";
@@ -41,7 +59,6 @@ impl Default for MyApp {
 //---------------------------------------------------------------------------//
 impl eframe::App for MyApp {
    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-      //OLD
       egui::CentralPanel::default().show(ctx, |ui| {
          //ho provato la modifica -->egui::horizontal_wrapped()::default().show(ctx, |ui| {
 
@@ -63,8 +80,10 @@ impl eframe::App for MyApp {
          let button_clicked = ui.button("Next").clicked();
          if button_clicked {
             self.riga = (self.riga + 1) % num_righe;
-         }
+         } //ho provato la modifica -->egui::horizontal_wrapped()::default().show(ctx, |ui| {
 
+         //TABELLA = creo le colonne + imposto i campi + associo i valori ai campi
+         //=================================================================================================//
          //01 creo l'oggetto table con 5 colonne
          TableBuilder::new(ui)
             .striped(true)
@@ -94,36 +113,44 @@ impl eframe::App for MyApp {
                   app_ui.strong("INIZIALI_DIP_S");
                });
             }).body(|body| {
-            //03 itero nel record ed associo i 5 valori dei campi
 
-               body.rows(20.0, num_righe, |i, mut row| {
-                  if let Some(dip) = self.vettore_dipendenti.get(i) {
+            //03 itero nel record ed associo i 5 valori dei campi
+            body.rows(20.0, num_righe, |i, mut row| {
+               if let Some(dip) = self.vettore_dipendenti.get(i) {
                   row.col(|app_ui| {
                      app_ui.label(format!("{}", dip.get_ID_DIPEN_lng().unwrap()));
                   });
-                  row.col(|app_ui| {
 
+                  row.col(|app_ui| {
                      //@da@errore E NON CAPISCO PERCHE' NELLA COLONNA @DENOMINAZIONE
                      app_ui.label(dip.get_DENOMINAZIONE_s().unwrap_or(&"null".to_owned()));
                   });
-                  row.col(|app_ui| {
-                     app_ui.label(dip.get_COGNOME_S().unwrap_or(&"null".to_owned()));
-                  });
-                  row.col(|app_ui| {
-                     let _ = app_ui.label(dip.get_NOME_S().unwrap_or(&"null".to_owned()));
-                  });
-                  row.col(|app_ui| {
-                     let _ = app_ui.label(dip.get_INIZIALI_DIP_S().unwrap_or(&"null".to_owned()));
-                  });
+
+                  row.col(|app_ui| { app_ui.label(dip.get_COGNOME_S().unwrap_or(&"null".to_owned())); });
+
+                  row.col(|app_ui| { let _ = app_ui.label(dip.get_NOME_S().unwrap_or(&"null".to_owned())); });
+
+                  row.col(|app_ui| { let _ = app_ui.label(dip.get_INIZIALI_DIP_S().unwrap_or(&"null".to_owned())); });
                }
-            });
+            }); //if let Some(dip) =....
          });
+
+         //=================================================================================================//
       });
    }
-}
-//---------------------------------------------------------------------------//
+}   //fn update(&mut self, ctx: ...} //impl eframe::App for MyApp {
 
-//03 AVVIO LA  MYAPP
+
+//---------------------------------------------------------------------------//
+/*03 AVVIO LA  MYAPP
+   Note
+      avvia la app costruita con
+       @3_01_FRAME_OPTION = Creo un opzione nativa per inizializzare il frame con le grandezze x,y + altro
+            - x,y
+            - thema dark
+            - Defalut = resto
+       @3_02_RUN_EFRAME = Creo un opzione nativa per inizializzare il frame con le grandezze x,y + altro
+*/
 //---------------------------------------------------------------------------//
 
 pub fn avvia_gui(lista_dipendenti: Vec<Dipendente>) -> Result<(), eframe::Error> {
@@ -133,6 +160,7 @@ pub fn avvia_gui(lista_dipendenti: Vec<Dipendente>) -> Result<(), eframe::Error>
       default_theme: Theme::Dark,
       ..Default::default() // il resto
    };
+
    eframe::run_native(
       TITOLO_GUI,
       options,
@@ -141,4 +169,3 @@ pub fn avvia_gui(lista_dipendenti: Vec<Dipendente>) -> Result<(), eframe::Error>
       }),
    )
 }
-//---------------------------------------------------------------------------//
