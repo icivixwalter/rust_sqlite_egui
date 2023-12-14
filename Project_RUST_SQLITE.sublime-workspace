@@ -1,0 +1,280 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"termin",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"open defalu",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"TEM",
+				"Terminus: Open Default Shell in Panel"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+			"DIR"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/valter/CASA/PROGRAMMI/RUST/rust_sqlite",
+		"/home/valter/CASA/PROGRAMMI/RUST/rust_sqlite/src",
+		"/home/valter/CASA/PROGRAMMI/RUST/rust_sqlite/src/ui",
+		"/home/valter/CASA/PROGRAMMI/RUST/rust_sqlite/target"
+	],
+	"file_history":
+	[
+		"/home/valter/CASA/PROGRAMMI/RUST/rust_sqlite/src/ui/app_ui.rs",
+		"/home/valter/CASA/CARTELLACONDIVISA/RUST/RUST_PURO_CALCOLO_INTERESSI-main/PROCEDURA_CALCOLO/Risultato_calcolo.json",
+		"/home/valter/.cache/.fr-d8rkSG/lapce-nightly/lapce-proxy/Cargo.toml",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/PROCEDURA_CALCOLO/Risultato_calcolo.json",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_json/Cargo.toml",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html_(nonFunziona)/Cargo.toml",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html_(nonFunziona)/src/main.rs",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html_(nonFunziona)/src/lib.rs",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi/src/main.rs",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/www/index.html",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/src/main.rs",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/www/main.json",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/www/intex.html",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/src/lib.rs",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/FORM_CALCOLI.HTML",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_json/src/main.rs",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/PROCEDURA_CALCOLO/dati.json",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/PROCEDURA_CALCOLO/dati.txt",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_html/Cargo.toml",
+		"/C/CASA/LINGUAGGI/RUST_PROGETTI/RUST_PURO/RUST_PURO_CALCOLO_INTERESSI/calcolo_interessi_json/src/main_FUNZIONANTE.MD",
+		"/home/valter/CASA/CARTELLACONDIVISA/RUST/RUST_CALCOLO_INTERESSI/calcolo_interessi_json/src/main.rs",
+		"/home/valter/calcolo_interessi/REDME.MD",
+		"/home/valter/CASA/CARTELLACONDIVISA/RUST/RUST_CALCOLO_INTERESSI/calcolo_interessi_json/Cargo.toml",
+		"/home/valter/CASA/CARTELLACONDIVISA/RUST/RUST_CALCOLO_INTERESSI/calcolo_interessi_json/dati.json",
+		"/home/valter/calcolo_interessi/src/main.rs",
+		"/home/valter/CASA/LINGUAGGI/UBUNTU/UBUNTU_TUTORIAL.md",
+		"/home/valter/CASA/ADUNANZE/STUDI_ADUNANZE.tex",
+		"/home/valter/CASA/CARTELLACONDIVISA/RUST/DIPENDENTI.csv",
+		"/home/valter/Programmi/RustRover-233.10527.39/Install-Linux-tar.txt",
+		"/home/valter/.config/sublime-text/Packages/PackageResourceViewer/PackageResourceViewer.sublime-settings",
+		"/home/valter/CASA/ADUNANZE/STUDI_ADUNANZE.aux",
+		"/home/valter/prova.txt",
+		"/home/valter/Scaricati/sublime-text_build-4152_amd64.deb",
+		"/home/valter/untitled"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@1_FRAME = inizializza il frame con le grandezze x,y + altro",
+			"@3_FRAME_OPTION",
+			"@3_FRAME = inizializza il frame con le grandezze x,y + altro",
+			"//@3_FRAME = inizializza il frame con le grandezze x,y + altro",
+			"@1_FRAME",
+			"@come",
+			"@SUBLIME",
+			"@shell",
+			"aggiorna",
+			"@aggiorna",
+			"denaro",
+			"regno di dio",
+			"seme",
+			"mostrero",
+			"ebrei",
+			"ebbrei",
+			"RIBBELLIONE",
+			"@portafuoco",
+			"@mormorio",
+			"@Cora",
+			"numeri",
+			"ebrei",
+			"tetto",
+			"gocciolare",
+			"pazienza",
+			"accorto",
+			"@sentieri",
+			"proverbi",
+			"@superbo",
+			"ecclesiaste",
+			"pazienti",
+			"pazienza",
+			"salmo",
+			"si acconta",
+			"accontentarsi",
+			"accontentatevi",
+			"@prestiti",
+			"proverbi",
+			"ecclesiate",
+			"ecl",
+			"ESODO",
+			"esodo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"RIBELLIONE"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 241.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 120.0
+	},
+	"output.Terminus 3":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Project_RUST_SQLITE.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/CASA/LINGUAGGI/SUBLIMETEXT/SUBLIMETEXT.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 408.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

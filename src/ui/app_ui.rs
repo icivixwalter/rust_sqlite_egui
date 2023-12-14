@@ -122,7 +122,7 @@ impl eframe::App for MyApp {
                   });
 
                   row.col(|app_ui| {
-                     //@da@errore E NON CAPISCO PERCHE' NELLA COLONNA @DENOMINAZIONE
+                     //@valori@colonne
                      app_ui.label(dip.get_DENOMINAZIONE_s().unwrap_or(&"null".to_owned()));
                   });
 
