@@ -21,11 +21,11 @@ use crate::models::Dipendente;
 */
 
 
-//costanti
+//01 CREO STRUTTURA DELLA MYAPP + IMPLEMENTAZIONI
+//============================================================================================//
+//COSTANTI + STRUTTURA
 pub const TITOLO_GUI: &str = "APPLICAZIONE DI PARTENZA";
 
-//01 CREO ED IMPLEMENTO LA STRUTTURA DELLA MYAPP
-//---------------------------------------------------------------------------//
 struct MyApp {
    name: String,
    age: u32,
@@ -33,6 +33,7 @@ struct MyApp {
    vettore_dipendenti: Vec<Dipendente>,
 }
 
+//IMPLEMENTO MYAPP
 /// Metodi esclusivi della struttura MyApp
 impl MyApp {
    fn new(lista_dipendenti: Vec<Dipendente>) -> Self {
@@ -41,8 +42,7 @@ impl MyApp {
       return my_app;
    }
 }
-
-/// alla creazione dell'oggetto Myapp imposto i valori di default definiti in questo metodo.
+// IMPLEMENTO DEFAULT = alla creazione dell'oggetto Myapp imposto i valori di default definiti in questo metodo.
 impl Default for MyApp {
    fn default() -> Self {
       Self {
@@ -53,10 +53,8 @@ impl Default for MyApp {
       }
    }
 }
-//---------------------------------------------------------------------------//
 
-//02 ATTIVO LA  MYAPP
-//---------------------------------------------------------------------------//
+// IMPLEMENTO EFRAME
 impl eframe::App for MyApp {
    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
       egui::CentralPanel::default().show(ctx, |ui| {
@@ -74,9 +72,15 @@ impl eframe::App for MyApp {
          if ui.button("Click each year").clicked() {
             self.age += 1;
          }
+
+         //LABEL
          ui.label(format!("Hello '{}', age {}", self.name, self.age));
 
+
+         //CALCOLO NURO RIGHE
          let num_righe = self.vettore_dipendenti.len();  // numero di record recuperati
+
+         //BUTTON + CLICK
          let button_clicked = ui.button("Next").clicked();
          if button_clicked {
             self.riga = (self.riga + 1) % num_righe;
@@ -140,6 +144,9 @@ impl eframe::App for MyApp {
    }
 }   //fn update(&mut self, ctx: ...} //impl eframe::App for MyApp {
 
+// *** fine 01 CREO STRUTTURA DELLA MYAPP + IMPLEMENTAZIONI
+//============================================================================================//
+
 
 //---------------------------------------------------------------------------//
 /*03 AVVIO LA  MYAPP
@@ -153,6 +160,10 @@ impl eframe::App for MyApp {
 */
 //---------------------------------------------------------------------------//
 
+
+
+//AVVIO DELLA GUI
+//---------------------------------------------------------------------------//
 pub fn avvia_gui(lista_dipendenti: Vec<Dipendente>) -> Result<(), eframe::Error> {
    let options = eframe::NativeOptions {
       //grandezza iniziale form @modifica = da 320.0 a 240.0 in x320 y 390
@@ -169,3 +180,5 @@ pub fn avvia_gui(lista_dipendenti: Vec<Dipendente>) -> Result<(), eframe::Error>
       }),
    )
 }
+
+//---------------------------------------------------------------------------//
